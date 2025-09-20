@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solsun – Soluções Solares e Engenharia</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="img/inicio-logo.png">
+  <script defer src="script.js"></script>
+</head>
+
+<!-- ===== FAQ Hierárquico (flutuante) ===== -->
+<button class="chatfab" id="faqFab" aria-label="Abrir ajuda">💬</button>
+
+<div class="faqbox" id="faqBox" aria-hidden="true">
+  <header class="faqbox__head">
+    <div>
+      <strong>Solsun — Ajuda rápida</strong>
+      <div class="faqbox__sub">Escolha uma categoria</div>
+    </div>
+    <button class="faqbox__close" id="faqClose" aria-label="Fechar">✕</button>
+  </header>
+
+  <div class="faqbox__crumbs" id="faqCrumbs"></div>
+
+  <div class="faqbox__body">
+    <div id="faqList" class="faqlist" role="list"></div>
+    <article id="faqAnswer" class="faqanswer" hidden>
+      <h4 id="faqQuestion"></h4>
+      <p id="faqText"></p>
+      <div class="faqcta">
+        Precisa de um estudo gratuito?
+        <a class="faqwa" href="https://wa.me/5513981122966?text=Ol%C3%A1%20Solsun!%20Quero%20uma%20simula%C3%A7%C3%A3o."
+           target="_blank" rel="noopener">Pedir simulação no WhatsApp</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="faqbox__foot">
+    <button class="faqback" id="faqBack" disabled>← Voltar</button>
+  </footer>
+</div>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="topo">
+    <nav class="nav container">
+      <a href="#inicio" class="brand">
+        <img src="img/logofalecomigo.png" alt="Solsun logo" class="brand__logo">
+        <span class="brand__text">SOLSUN</span>
+      </a>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="nav__bar"></span><span class="nav__bar"></span><span class="nav__bar"></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#vantagens">Vantagens</a></li>
+        <li><a href="#simulacao">Simulação</a></li>
+        <li><a href="#contato" class="btn btn--sm">Fale Conosco</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg"></div>
+    <div class="container hero__content">
+      <h1>Energia solar para economizar e <span class="highlight">valorizar seu imóvel</span></h1>
+      <p>Projetos fotovoltaicos completos: engenharia, instalação e suporte.</p>
+      <div class="hero__cta">
+        <a href="#simulacao" class="btn">Quero minha simulação</a>
+        <a href="#vantagens" class="btn btn--ghost">Ver vantagens</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NÓS (novo) -->
+<section class="sobre" id="sobre" aria-label="Sobre nós">
+  <div class="sobre__bg" role="img" aria-label="Floresta ao fundo"></div>
+
+  <div class="sobre__wrap">
+    <div class="sobre__title">
+      <img src="img/inicio-logo.png" alt="Solsun" class="sobre__logo">
+      <h2>SOBRE<br>NÓS</h2>
+    </div>
+
+    <div class="sobre__cards">
+      <!-- Card 1 -->
+      <article class="perfil">
+      <img src="img/Gabriel.jpg" alt="Gabriel Battistotti" class="perfil__foto">
+        <h3 class="perfil__nome">Gabriel Battistotti</h3>
+        <ul class="perfil__lista">
+          <li>Engenheiro Eletricista</li>
+          <li>Técnico em Eletrotécnica</li>
+          <li>Eletricista em Manutenção</li>
+        </ul>
+
+        <h4 class="perfil__sub">Cursos Complementares</h4>
+        <ul class="perfil__lista">
+          <li>Projetos de Sistemas Fotovoltaicos</li>
+          <li>Instalação de Sistemas Fotovoltaicos</li>
+          <li>SketchUp e PvSyst Avançado</li>
+        </ul>
+
+        <h4 class="perfil__sub">Atuação</h4>
+        <p class="perfil__texto">
+          Possui experiência consolidada em Engenharia Elétrica, com 2 anos de atuação na Neoenergia Elektro,
+          onde adquiriu amplo conhecimento em Distribuição de Energia. Atua como Engenheiro de Projetos,
+          desenvolvendo sistemas fotovoltaicos, instalações prediais, cabines primárias e infraestrutura elétrica,
+          com foco em segurança, eficiência e conformidade com as normas técnicas vigentes.
+        </p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="perfil">
+        <div class="perfil__foto" aria-hidden="true"></div>
+        <h3 class="perfil__nome">Felipe Garcia</h3>
+        <ul class="perfil__lista">
+          <li>Engenheiro Civil</li>
+          <li>Técnico em Eletroeletrônica</li>
+          <li>MBA em Gestão de Projetos</li>
+        </ul>
+
+        <h4 class="perfil__sub">Cursos Complementares</h4>
+        <ul class="perfil__lista">
+          <li>Revit com foco em BIM</li>
+          <li>AutoCAD Avançado</li>
+          <li>Desenhista Copista de Edificações</li>
+        </ul>
+
+        <h4 class="perfil__sub">Atuação</h4>
+        <p class="perfil__texto">
+          Ampla experiência na execução de obras, tendo participado de mais de 15 projetos relevantes, como
+          Subestação de Energia Manoel da Nóbrega, construção de perímetros e condomínios, terraplanagem,
+          contenção de encostas (solo grampeado) e obras de infraestrutura urbana, pavimentação e drenagem.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Vantagens -->
+  <section class="vantagens-band" id="vantagens">
+    <div class="container center">
+      <h2 class="vant-title-top">
+        <img src="img/inicio-logo.png" alt="Solsun" class="vantagens__logo"> VANTAGENS
+      </h2>
+      <div class="vant-menu">
+        <a class="vant-pill active" href="#vant-economicas" data-vant="economicas">Econômicas</a>
+        <a class="vant-pill" href="#vant-ambientais" data-vant="ambientais">Ambientais</a>
+        <a class="vant-pill" href="#vant-seguranca" data-vant="seguranca">Segurança Energética</a>
+        <a class="vant-pill" href="#vant-outros" data-vant="outros">Outros</a>
+      </div>
+    </div>
+
+    <!-- Econômicas -->
+    <section class="band band--economicas" id="vant-economicas">
+      <div class="band__inner">
+        <div class="band__left">
+          <div class="band__head">
+            <img src="img/piggy-bank.svg" alt="Econômicas" class="band__icon-img">
+            <h3 class="band__title">ECONÔMICAS</h3>
+          </div>
+        </div>
+        <div class="band__content">
+          <div class="band__grid">
+            <article class="vant-card"><h4>Redução da conta</h4><p>Economia de até 95%.</p></article>
+            <article class="vant-card"><h4>Retorno do investimento</h4><p>Payback em 2 a 6 anos.</p></article>
+            <article class="vant-card"><h4>Proteção contra aumentos</h4><p>Menos vulnerável a reajustes.</p></article>
+            <article class="vant-card"><h4>Valorização do imóvel</h4><p>Imóveis solares valem mais.</p></article>
+          </div>
+          <p class="band__cta">Retorno garantido — Energia inteligente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ambientais -->
+    <section class="band band--ambientais" id="vant-ambientais">
+      <div class="band__inner">
+        <div class="band__left">
+          <div class="band__head">
+            <img src="img/plant.svg" alt="Ambientais" class="band__icon-img">
+            <h3 class="band__title">AMBIENTAIS</h3>
+          </div>
+        </div>
+        <div class="band__content">
+          <div class="band__grid">
+            <article class="vant-card"><h4>Energia limpa</h4><p>Zero emissões de carbono.</p></article>
+            <article class="vant-card"><h4>Sustentabilidade</h4><p>Atende metas ESG.</p></article>
+            <article class="vant-card"><h4>Preservação</h4><p>Menor dependência de fósseis.</p></article>
+          </div>
+          <p class="band__cta">Energia limpa para o futuro</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segurança -->
+    <section class="band band--seguranca" id="vant-seguranca">
+      <div class="band__inner">
+        <div class="band__left">
+          <div class="band__head">
+            <img src="img/lock-key.svg" alt="Segurança Energética" class="band__icon-img">
+            <h3 class="band__title">Segurança Energética</h3>
+          </div>
+        </div>
+        <div class="band__content">
+          <div class="band__grid">
+            <article class="vant-card"><h4>Autossuficiência</h4><p>Mais autonomia.</p></article>
+            <article class="vant-card"><h4>Baterias</h4><p>Energia até em quedas de rede.</p></article>
+            <article class="vant-card"><h4>Previsibilidade</h4><p>Custos estáveis.</p></article>
+          </div>
+          <p class="band__cta">Invista em bem-estar</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outros -->
+    <section class="band band--outros" id="vant-outros">
+      <div class="band__inner">
+        <div class="band__left">
+          <div class="band__head">
+            <img src="img/plus-circle.svg" alt="Outros" class="band__icon-img">
+            <h3 class="band__title">OUTROS</h3>
+          </div>
+        </div>
+        <div class="band__content">
+          <div class="band__grid">
+            <article class="vant-card"><h4>Baixa manutenção</h4><p>Vida útil longa.</p></article>
+            <article class="vant-card"><h4>Incentivos</h4><p>Linhas de crédito e benefícios.</p></article>
+          </div>
+          <p class="band__cta">Mais benefícios para você</p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Simulação -->
+  <section class="section" id="simulacao">
+    <div class="container grid-2">
+      <div>
+        <h2>Solicite uma simulação</h2>
+        <form class="form" id="simulacaoForm">
+          <div class="form__row"><label>Nome*</label><input type="text" name="nome" required></div>
+          <div class="form__row"><label>Telefone*</label><input type="tel" name="telefone" required></div>
+          <div class="form__row"><label>E-mail</label><input type="email" name="email"></div>
+          <div class="form__row"><label>Consumo (kWh)*</label><input type="number" name="kwh" required></div>
+          <div class="form__row"><label>Cidade*</label><input type="text" name="cidade" required></div>
+          <div class="form__row"><label>Estado*</label><input type="text" name="estado" required></div>
+          <button type="submit" class="btn">Quero minha simulação</button>
+        </form>
+      </div>
+      <div class="media">
+        <img src="img/logofalecomigo.png" alt="Painéis solares">
+        <div class="contact-card">
+          <h4>Atendimento Sunsolar</h4>
+          <p><a href="https://www.solsunsolar.com.br">www.solsunsolar.com.br</a></p>
+          <p><a href="https://wa.me/5513981122966">(13) 9 8112-2966</a></p>
+          <p><a href="mailto:contato@solsunsolar.org">contato@solsunsolar.org</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="section section--alt" id="contato">
+    <div class="container center">
+      <h2>Fale Conosco</h2>
+      <div class="cta-group">
+        <a class="btn" href="https://wa.me/5513981122966">WhatsApp</a>
+        <a class="btn btn--ghost" href="mailto:contato@solsunsolar.org">E-mail</a>
+        <a class="btn btn--ghost" href="#simulacao">Formulário</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand"><img src="img/logofalecomigo.png" alt="logo"><p>Soluções Solares e Engenharia</p></div>
+      <ul class="footer__links"><li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#vantagens">Vantagens</a></li><li><a href="#simulacao">Simulação</a></li><li><a href="#contato">Contato</a></li></ul>
+      <div class="footer__contact"><a href="https://www.solsunsolar.com.br">www.solsunsolar.com.br</a><br><a href="https://wa.me/5513981122966">(13) 9 8112-2966</a><br><a href="mailto:contato@solsunsolar.org">contato@solsunsolar.org</a></div>
+    </div>
+    <div class="footer__copy">© <span id="year"></span> Solsun. Todos os direitos reservados.</div>
+  </footer>
+  <a href="#topo" class="backtop">▲</a>
+</body>
+</html>
