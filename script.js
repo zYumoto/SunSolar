@@ -3,8 +3,17 @@ const menu = document.querySelector(".nav__menu");
 const year = document.getElementById("year");
 const form = document.getElementById("simulacaoForm");
 const revealItems = document.querySelectorAll(".section-reveal");
+const progress = document.querySelector(".scroll-progress");
 
 year.textContent = new Date().getFullYear();
+
+function updateProgress() {
+  if (!progress) return;
+
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const percent = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  progress.style.width = `${Math.min(100, Math.max(0, percent))}%`;
+}
 
 function closeMenu() {
   menu?.classList.remove("is-open");
@@ -80,7 +89,13 @@ if ("IntersectionObserver" in window) {
     { threshold: 0.14, rootMargin: "0px 0px -70px 0px" }
   );
 
-  revealItems.forEach((item) => revealObserver.observe(item));
+  revealItems.forEach((item, index) => {
+    item.style.setProperty("--reveal-delay", `${Math.min(index * 90, 360)}ms`);
+    revealObserver.observe(item);
+  });
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+updateProgress();
+window.addEventListener("scroll", updateProgress, { passive: true });
