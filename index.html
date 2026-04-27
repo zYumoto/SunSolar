@@ -309,6 +309,48 @@
     </div>
   </footer>
 
+  <section class="solar-assistant" aria-live="polite">
+    <button class="assistant-toggle" type="button" aria-label="Abrir assistente Solsun" aria-expanded="false" aria-controls="assistantPanel">
+      <span class="assistant-toggle__pulse"></span>
+      <span class="assistant-toggle__icon">?</span>
+      <span class="assistant-toggle__text">Ajuda</span>
+    </button>
+
+    <div class="assistant-panel" id="assistantPanel" aria-hidden="true">
+      <header class="assistant-panel__header">
+        <div>
+          <strong>Assistente Solsun</strong>
+          <span>Respostas rápidas para sua simulação</span>
+        </div>
+        <button class="assistant-close" type="button" aria-label="Fechar assistente">×</button>
+      </header>
+
+      <div class="assistant-panel__body">
+        <div class="assistant-message assistant-message--bot">
+          Olá! Escolha uma dúvida abaixo ou fale direto com a equipe pelo WhatsApp.
+        </div>
+
+        <div class="assistant-questions" role="list">
+          <button type="button" data-answer="economia">Quanto posso economizar?</button>
+          <button type="button" data-answer="payback">Qual o payback médio?</button>
+          <button type="button" data-answer="processo">Como funciona o processo?</button>
+          <button type="button" data-answer="documentos">O que preciso enviar?</button>
+          <button type="button" data-answer="manutencao">Precisa de manutenção?</button>
+        </div>
+
+        <div class="assistant-answer" id="assistantAnswer">
+          <strong>Economia estimada</strong>
+          <p>A economia costuma chegar a até 95% da conta, dependendo do consumo, tarifa, área disponível e dimensionamento do sistema.</p>
+        </div>
+      </div>
+
+      <footer class="assistant-panel__footer">
+        <a href="#simulacao">Preencher simulação</a>
+        <a href="https://wa.me/5513981122966?text=Ol%C3%A1%20Solsun!%20Tenho%20uma%20d%C3%BAvida%20sobre%20energia%20solar." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      </footer>
+    </div>
+  </section>
+
   <a class="whatsapp-float" href="https://wa.me/5513981122966?text=Ol%C3%A1%20Solsun!%20Quero%20uma%20simula%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Chamar a Solsun no WhatsApp">
     <span>WhatsApp</span>
   </a>
